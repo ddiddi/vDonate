@@ -68,9 +68,9 @@ body {
 
 .sign-up {
   position: relative;
-  margin: 50px auto;
-  width: 30%;
-  padding: 5% 3% 4% ;
+  margin: 15% auto;
+  width: 430px;
+  padding: 30px;
   background: white;
   border-bottom: 1px solid #c4c4c4;
   border-radius: 5px;
@@ -94,9 +94,9 @@ body {
 }
 
 .sign-up-title {
-  margin: -5% -5% 5%;
+  margin: 2px 2px 2px;
   font-family: ParaCity;
-  padding: 5px 5px;
+  padding: 2px 2px;
   line-height: 35px;
   font-size: 3em;
   font-weight: 300;
