@@ -49,7 +49,7 @@
 </div>
   
   <div id="demo" class="collapse" style="padding: 30px">
-   <b>$10</b><input id="ex1" style="width: 24em; " data-slider-id='ex1Slider' type="text" data-slider-min="10" data-slider-max="100" data-slider-step="2" data-slider-value="20"/><b>$100</b>
+   <b>$10</b><input id="amtSlider" style="width: 24em; " data-slider-id='amtSlider' type="text" data-slider-min="10" data-slider-max="100" data-slider-step="2" data-slider-value="20"/><b>$100</b>
    
 	<p> (Drag to Donation Amount) </p>
 	</div>
@@ -61,11 +61,11 @@
 
 	<script type="text/javascript">
 	$(document).ready(function() {
-		$('#ex1').slider({
-			formatter: function(value) {
-				return '$ ' + value;
-			}
-		});	
+		var slider = new Slider('#amtSlider', {
+	formatter: function(value) {
+		return '$ ' + value;
+	}
+		});
 	});
 	</script>	
 	
