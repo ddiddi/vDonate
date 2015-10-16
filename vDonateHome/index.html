@@ -43,10 +43,9 @@
    <div id="donDesc" class="collapse" style="padding-top:20px; padding-bottom: 20px;">
    <b>$10 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.$10 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla aasd</div>
 
-    <a style="display: none;" id='a' class="typeform-share link" href="https://dhruvdiddi.typeform.com/to/OVnQzK" data-mode="1" target="_blank">Launch me!</a>
-<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+    <a style="display: none;" onclick ="signClick()" id='signRedirect' href="https://dhruvdiddi.typeform.com/to/OVnQzK">Launch me!</a>
 
-    <a style="display: none;" id='loginRedirect'  onclick ="redirectClick()" href="http://www.google.com" >Launch me!</a>
+    <a style="display: none;" onclick ="redirectClick()" id='loginRedirect' href="http://www.google.com" >Launch me!</a>
 
 
     <input type="button" value="Setup vDonate" class="sign-up-button" onclick="setupOnClick()">
@@ -76,6 +75,9 @@
    */
   });
 
+  function signClick() {
+    window.location = $('#signRedirect').attr("href");
+  }
   function redirectClick() {
     window.location = $('#loginRedirect').attr("href");
   }
@@ -90,7 +92,7 @@
   }
 
   function setupOnClick() {
-   $('#a').click();
+    $('#signRedirect').click();
   }
  </script>
 <script src="js/plugin.js"></script>
