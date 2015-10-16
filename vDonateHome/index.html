@@ -46,6 +46,9 @@
     <a style="display: none;" id='a' class="typeform-share link" href="https://dhruvdiddi.typeform.com/to/OVnQzK" data-mode="1" target="_blank">Launch me!</a>
 <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
 
+    <a style="display: none;" id='loginRedirect'  onclick ="redirectClick()" href="http://www.google.com" >Launch me!</a>
+
+
     <input type="button" value="Setup vDonate" class="sign-up-button" onclick="setupOnClick()">
     <div id="login" class="collapse" style="padding-top:20px; padding-bottom: 20px;">
       <input type="text" class="sign-up-input" placeholder="Enter Username" autofocus>
@@ -62,6 +65,8 @@
 </body>
 
  <script>
+
+  var Pressed = 0;
   $(document).ready(function() {
    /* Try to dis-comment this:
    $('#a').click(function () {
@@ -71,8 +76,17 @@
    */
   });
 
+  function redirectClick() {
+    window.location = $('#loginRedirect').attr("href");
+  }
   function loginChange() {
-   $('#loginr').attr("value","Submit");
+   if (Pressed == 0) {
+      $('#loginr').attr("value","Submit");
+      Pressed = 1;
+    }
+    else if(Pressed > 0) {
+      $('#loginRedirect').click();  
+    }
   }
 
   function setupOnClick() {
