@@ -47,13 +47,13 @@
 <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
 
     <input type="button" value="Setup vDonate" class="sign-up-button" onclick="setupOnClick()">
-
-    <input type="button" value="Login" class="sign-up-button collapsed" data-toggle="collapse" data-target="#login">
     <div id="login" class="collapse" style="padding-top:20px; padding-bottom: 20px;">
       <input type="text" class="sign-up-input" placeholder="Enter Username" autofocus>
       <input type="password" class="sign-up-input" placeholder="Password" autofocus>
-         
+     
    </div>
+
+    <input id = 'loginr' type="button" value="Login" onclick="loginChange()" class="sign-up-button collapsed" data-toggle="collapse" data-target="#login">
 
     <input type="button" value="Explore* (Coming Soon)" class="sign-up-button">
   </form>
@@ -70,8 +70,12 @@
    });
    */
   });
+
+  function loginChange() {
+   $('#loginr').attr("value","Submit");
+  }
+
   function setupOnClick() {
-    debugger;
    $('#a').click();
   }
  </script>
